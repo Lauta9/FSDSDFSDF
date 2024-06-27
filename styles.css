@@ -1,0 +1,184 @@
+/* Estilos generales */
+body {
+    font-family: 'Chewy', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFCE32;
+    color: #1D63FF;
+}
+
+/* Encabezado */
+header {
+    background-color: #b31717;
+    color: #1D63FF;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 5em;
+}
+
+/* Navegación social */
+nav.social-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0; /* Ajuste de margen superior para separar de #contract */
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+nav.social-nav ul li {
+    display: inline;
+}
+
+nav.social-nav ul li a {
+    display: block;
+    width: 60px; /* Aumentado a 60px */
+    height: 60px; /* Aumentado a 60px */
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.5s, box-shadow 0.3s;
+}
+
+nav.social-nav ul li img {
+    width: 100%;
+    height: auto;
+}
+
+nav.social-nav ul li a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de héroe */
+.hero {
+    background: url('img/hero-bg.jpg') no-repeat center center/cover;
+    color: #1D63FF;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero .container {
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 5em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.hero-image {
+    max-width: 700px;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+/* Secciones */
+section {
+    padding: 40px 20px;
+}
+
+section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Galería */
+.gallery-grid {
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Cambiado a wrap para manejar varios elementos */
+    justify-content: center;
+}
+
+.gallery-item img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección Contract */
+#contract {
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 10px; /* Margen inferior para separar de la siguiente sección */
+    color: #1D63FF; /* Color de texto */
+    border-radius: 8px;
+    font-size: 1.5em;
+}
+
+/* Sección Carrusel */
+#carousel {
+    text-align: center;
+    background-color: #1D63FF;
+    color: #FFCE32;
+    padding: 20px 0;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+}
+
+.carousel span {
+    font-size: 2em;
+    padding: 0 20px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Pie de página */
+footer {
+    background-color: #FFCE32;
+    color: #1D63FF;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .team-grid, .gallery-grid {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    nav.social-nav ul {
+        flex-direction: column;
+    }
+}
